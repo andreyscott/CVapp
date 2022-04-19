@@ -8,6 +8,7 @@ import {
 } from "./icons";
 import './App.scss';
 import About from "./components/about";
+import  data  from "./data.json";
 
 function App() {
   return (
@@ -15,15 +16,15 @@ function App() {
      
 
      {/* ====== =Hero Section =======  */}
-    <section id="hero" className="d-flex flex-column justify-content-center headposition">
-      <div className="container" data-aos="zoom-in" data-aos-delay="100">
+    <section id="hero" className="headposition">
+      <div className="container" >
         <h1>Andrey Scott</h1>
         <p className="type">
        <strong className="">
        I'm
        </strong>    <Typewriter
 						options={{
-							strings: [ "Web Developer🚀", "Seo Expert👨‍💻.", "  Mobile Dev 📱."],
+							strings: [ "Web Developer🚀", "Seo Expert👨‍💻.", "Life time learner📱."],
 							autoStart: true,
 							loop: true,
 							wrapperClassName: "landing-page__role",
@@ -33,15 +34,14 @@ function App() {
 					/>
         </p>
         <div className="social-links">
-          
-          <a
-            href="https://www.linkedin.com/in/andrew-irorere/"
-            target="_blank"
-            className="linkedin"
-            >
-            <LinkedinIcon />
-
-          </a>
+						<a
+							href={data.social.linkedIn}
+							className="social__link"
+							target="_blank"
+							aria-label="LinkedIn"
+						>
+							<LinkedinIcon className="social__icon" width={27} />
+						</a>
           <a
             href="https://twitter.com/Andreyscott5"
             target="_blank"
@@ -60,7 +60,6 @@ function App() {
           </a>
           <a
             href="https://www.instagram.com/_ai.dev/"
-            target="_blank"
             className="instagram"
             >
             <InstagramIcon />
