@@ -61,6 +61,7 @@ $cyan: #17a2b8;
   justify-content: center;
 }
 
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -75,22 +76,12 @@ $cyan: #17a2b8;
     padding-left: 160px;
   }
 
-  &:before {
-    content: "";
-    background: rgba($white, 0.2);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
   h1 {
     margin: 0;
     font-size: 64px;
     font-weight: 700;
     line-height: 56px;
-    color: $secondary;
+    color: $default
   }
 
   p {
@@ -102,10 +93,20 @@ $cyan: #17a2b8;
       color: $primary;
       letter-spacing: 1px;
     }
+    .type {
+      font-size: 100px;
+      font-weight: 700;
+      color: $default;
+    }
   }
 
   .type{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #007bff
+    
   }
   strong{
     font-size: 20px;
@@ -116,7 +117,7 @@ $cyan: #17a2b8;
     a {
       font-size: 24px;
       display: inline-block;
-      color: $secondary;
+      color: $default;
       line-height: 1;
       margin-right: 20px;
       transition: 0.3s;
